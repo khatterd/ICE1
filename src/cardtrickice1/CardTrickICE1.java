@@ -16,30 +16,40 @@ public class CardTrickICE1 {
      */
     public static void main(String[] args) 
     {
-        Scanner kb = new Scanner(System.in);
-        Card[] magicHand = new Card[7]; //Array of object
-         Card  luckyCard = new Card();
+        Scanner sc        = new Scanner(System.in);
+        Card[]  magicHand = new Card[7]; //Array of object
+        Card    luckyCard = new Card();
+        
         luckyCard.setValue(6);
         luckyCard.setSuits("diamonds");
+        
         for( int i=0;i<magicHand.length;i++)
         {
             Card c1 = new Card();
+            
             c1.setValue(Card.RandomValue());
             c1.setSuits(Card.RandomSuit());
-            magicHand[i]= c1;
+            
+            magicHand[i] = c1;
+            
             System.out.println(magicHand[i].getValue() + " " + magicHand[i].getSuits());
             
         }
         
         System.out.println("Enter the card number (1 to 12)");
-        int num = kb.nextInt();
+        
+        int num = sc.nextInt();
+        
         System.out.println("Choose the card suits: ");
         System.out.println("1:hearts\n2:diamonds\n3:spades\n4:clubs");
-        int suitnum = kb.nextInt();
+        
+        int suitnum = sc.nextInt();
         String suit;
+        
         suit = CallSuit(suitnum);
         
         boolean match = true ;
+        
         for(int i =0; i < magicHand.length;i++)
         {
             match = true;
