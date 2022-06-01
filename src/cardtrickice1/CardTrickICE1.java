@@ -5,9 +5,9 @@ package cardtrickice1;
 import java.util.Scanner;
 /** step1 : generate 7 random cards and store in array - how
  * step 2: take any card input from user suit,number
- * step 3: user card is in  the array 'card is found
+ * step 3: user card is in  the array 'card is found'
  *
- * @author Devesh khatter
+ * @author Devesh Khatter
  */
 public class CardTrickICE1 {
 
@@ -18,7 +18,9 @@ public class CardTrickICE1 {
     {
         Scanner kb = new Scanner(System.in);
         Card[] magicHand = new Card[7]; //Array of object
-        
+         Card  luckyCard = new Card();
+        luckyCard.setValue(6);
+        luckyCard.setSuits("diamonds");
         for( int i=0;i<magicHand.length;i++)
         {
             Card c1 = new Card();
